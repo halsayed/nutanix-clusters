@@ -82,9 +82,9 @@ DATABASES = {
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'nutanix',
-        'USER': 'postgres',
-        'PASSWORD': '##PGSQL_PASS##',
-        'HOST': '##PGSQL_IP##',
+        'USER': 'dba',
+        'PASSWORD': 'nutanix/4u',
+        'HOST': '@PGSQL_IP@',
         'PORT': '5432'
     }
 }
