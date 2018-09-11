@@ -83,8 +83,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'nutanix',
         'USER': 'postgres',
-        'PASSWORD': 'nutanix/4u',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '##PGSQL_PASS##',
+        'HOST': '##PGSQL_IP##',
         'PORT': '5432'
     }
 }
