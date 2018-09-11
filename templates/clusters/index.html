@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nutanix Clusters</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Nutanix App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h2><br>Nutanix Cluster Test App</h2>
+        <p>Sample app lising the installed demo Nutanix clusters in the Middle East.</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-8 mx-auto">
+
+            <div class="row">
+                <div class="col">
+                    <h5>Database IP Address</h5>
+                </div>
+                <div class="col">
+                    {{ host }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h5>Database Port</h5>
+                </div>
+                <div class="col">
+                    {{ port }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h5>Connection Status</h5>
+                </div>
+                <div class="col">
+                    {% if connection %}
+                        <div class="alert alert-success" role="alert">
+                            Connected
+                        </div>
+                    {% else %}
+                        <div class="alert alert-danger" role="alert">
+                            Not Connected
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if connection %}
+                <a href="{% url 'index' %}admin" class="btn btn-info btn-lg">Go!</a>
+            {% endif %}
+
+
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
